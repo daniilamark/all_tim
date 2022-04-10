@@ -1,0 +1,55 @@
+#1
+print('Введите три числа: ')
+num1 = int(input())
+num = int(input())
+c = int(input())
+
+if b < a < c or c < a < b:
+    print('Среднее:', a)
+elif a < b < c or c < b < a:
+    print('Среднее:', b)
+else:
+    print('Среднее:', c)
+
+
+
+#2
+from random import random
+n = round(random() * 100)
+i = 1
+print("Компьютер загадал число. Отгадайте его. У вас 10 попыток")
+while i <= 10:
+    u = int(input(str(i) + '-я попытка: '))
+    if u > n:
+        print('Много')
+    elif u < n:
+        print('Мало')
+    else:
+        print('Вы угадали с %d-й попытки' % i)
+        break
+    i += 1
+else:
+    print('Вы исчерпали 10 попыток. Было загадано', n)
+
+
+
+
+
+#3
+
+my_list = [2, 4, 8]
+my_list.reverse()
+print(my_list)
+
+
+
+
+#4
+def change(lst):
+    lst[0], lst[-1] = lst[-1], lst[0]
+    return lst
+
+# Тесты
+print(change([1, 2, 3]))
+print(change([1, 2, 3, 4, 5]))
+print(change(['н', 'л', 'о', 'с']))
