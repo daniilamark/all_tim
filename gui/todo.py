@@ -10,7 +10,7 @@ def newTask():
         lb.insert(END, task)
         my_entry.delete(0, "end")
     else:
-        messagebox.showwarning("Ошибка", "Пожалуйста, введите какую-нибудь задачу")
+        messagebox.showwarning("Оа", "Пожалуйста, введите какую-нибудь задачу")
 
 
 def deleteTask():
@@ -76,6 +76,7 @@ addTask_btn = Button(
     pady=10,
     command=newTask
 )
+
 addTask_btn.pack(fill=BOTH, expand=True, side=LEFT)
 
 delTask_btn = Button(
@@ -87,6 +88,7 @@ delTask_btn = Button(
     pady=10,
     command=deleteTask
 )
+
 delTask_btn.pack(fill=BOTH, expand=True, side=LEFT)
 
 ws.mainloop()
